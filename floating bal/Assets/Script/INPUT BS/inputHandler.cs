@@ -14,7 +14,7 @@ public class inputHandler : MonoBehaviour
     private void Awake()
     {
         Player = new Player();
-        playerObj = GameObject.Find("Idiot");
+        playerObj = GameObject.Find("Player");
         
     }
     private void FixedUpdate()
