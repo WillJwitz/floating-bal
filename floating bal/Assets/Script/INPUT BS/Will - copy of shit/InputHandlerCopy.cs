@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class inputHandler : MonoBehaviour
+public class InputHandlerCopy : MonoBehaviour
 {
-
-    Player Player;
+     Player Player;
     playerControl controlScript;
     GameObject playerObj;
     Vector2 input;
