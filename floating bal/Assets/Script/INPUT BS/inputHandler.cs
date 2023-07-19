@@ -20,9 +20,9 @@ public class inputHandler : MonoBehaviour
     private void FixedUpdate()
     {
         input = Player.PlayerControls.WASD.ReadValue<Vector2>();
-        print(input);
+        
 
-        playerObj.SendMessage("Move", input); 
+       //playerObj.SendMessage("Move", input); 
     }
    private void OnEnable()
     {
