@@ -11,6 +11,8 @@ public class MouseInter : MonoBehaviour
     private float mouseDragPhysSpeed = 10;
     [SerializeField]
     private float mouseDragSpeed = .1f;
+    [SerializeField]
+    private float radius = 5f;
 
     private Camera mainCamera;
     private Vector3 velocity = Vector3.zero;
@@ -37,7 +39,7 @@ public class MouseInter : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
         RaycastHit2D hit2D = Physics2D.GetRayIntersection(ray);
-            if (hit2D.collider != null && (hit2D.collider.gameObject.CompareTag("Draggable")))
+            if (hit2D.collider != null && hit2D.collider.gameObject.CompareTag("Draggable"))
             {
                 StartCoroutine(dragUpdate(hit2D.collider.gameObject));
             }
