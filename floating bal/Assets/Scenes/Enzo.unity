@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 144704972}
   - component: {fileID: 144704976}
   - component: {fileID: 144704978}
+  - component: {fileID: 144704979}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -329,23 +330,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   jumpingPower: 20
-  jumping:
-    m_Name: Jumping
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 7b85c207-8dfd-43a6-8699-af8e7c26c942
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 40ffbf18-61b6-4c58-bd88-a44673aa65a2
-      m_Path: <Keyboard>/space
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Jumping
-      m_Flags: 0
-    m_Flags: 0
 --- !u!212 &144704974
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -530,7 +514,19 @@ MonoBehaviour:
     m_ActionId: 6bf671eb-41a2-41f2-a69c-29e98853dc6e
     m_ActionName: PlayerControls/Interact[/Keyboard/e]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 144704973}
+        m_TargetAssemblyTypeName: playerControl, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: fa809657-62ad-46bb-82b5-44754a6c6fd8
     m_ActionName: PlayerControls/Jump[/Keyboard/space,/Keyboard/w]
   - m_PersistentCalls:
@@ -550,6 +546,19 @@ MonoBehaviour:
   m_DefaultActionMap: PlayerControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &144704979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144704970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4257f88c69989614ca4ea446c9762056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 1453390410}
 --- !u!1 &173014079
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +679,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937241710}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7419468c54c44d47b86848491bd0e8f, type: 3}
   m_Name: 
@@ -779,7 +788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453390410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.05, y: 0.272, z: 0}
+  m_LocalPosition: {x: 0.87, y: 0.272, z: 0}
   m_LocalScale: {x: 1.773, y: 0.37783897, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

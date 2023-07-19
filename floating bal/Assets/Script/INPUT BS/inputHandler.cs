@@ -25,7 +25,7 @@ public class inputHandler : MonoBehaviour
        //playerObj.SendMessage("Move", input); 
     }
    private void OnEnable()
-    {
+   {
         Player.PlayerControls.Enable();
-    }
+   }
 }

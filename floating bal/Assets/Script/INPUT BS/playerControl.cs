@@ -16,20 +16,6 @@ public class playerControl : MonoBehaviour
     private bool isFacingRight = true;
     
 
-    [SerializeField]
-    private InputAction jumping;
-
-    private void OnEnable()
-    {
-        jumping.Enable();
-        jumping.performed += Jump;
-    }
-
-    private void OnDisable()
-    {
-        jumping.performed -= Jump;
-        jumping.Disable();
-    }
     private void Update()
     {
         rBody.velocity = new Vector2(horizontal * speed, rBody.velocity.y);
